@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/interests.css"> 
+        <title>Interests</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a class="navbar" href="Aboutme.html"><i class="fa fa-user"></i> About me</a>
+                </li>
+                <li>
+                    <a class="navbar" style="background-color: rgb(4,4,61);color:whitesmoke;border-radius: 15px;" href="interests.html"><i class="fa fa-heart"></i> Interests</a>
+                </li>
+                <li>
+                    <a class="navbar" href="life.html"><i class="fa fa-globe"></i> Life</a>
+                </li>
+                <li>
+                    <a class="navbar" href="queries.html"><i class="fa fa-phone"></i> Queries</a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <div class="row1">
+                <p>
+                    I am very much interested in coding and learning new languages.Especially in the web-development
+                    area.I am currently learning languages such as HTML, CSS and JavaScript and trying to improve myself by
+                    working more on it.After i'm done and ready with it,i am planning to dig deeper into it by learning other
+                    languages and frameworks.
+                </p>
+
+            </div>
+            <div class="row2">
+                <p>My other hobbies and interests include painting,drawing mandalas,reading etc.Here are some of my works.</p>
+                <div class="slides">
+
+                <img class="slideshow" src="images/slideshow/1.jpeg">
+                <img class="slideshow" src="images/slideshow/2.jpeg">
+                <img class="slideshow" src="images/slideshow/4.jpeg">
+                <img class="slideshow" src="images/slideshow/5.jpeg">
+                </div>
+
+
+
+            </div>
+        </div>
+        <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("slideshow");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+            </script>
+        
+    </body>
+</html>
